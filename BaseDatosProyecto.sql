@@ -134,7 +134,7 @@ SET DEFINE OFF;
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
---  Constraints for Table PRODUCTOS
+--  Constraints for Table PRODUCTOS 
 --------------------------------------------------------
 
   ALTER TABLE "MIUSUARIO"."PRODUCTOS" MODIFY ("ID_PRODUCTO" NOT NULL ENABLE);
