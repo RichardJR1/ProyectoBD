@@ -28,7 +28,7 @@ CREATE OR REPLACE TRIGGER TGR_NEW_PEDIDO
               BEFORE INSERT ON PEDIDO
                      FOR EACH ROW
                             BEGIN
-                              SELECT SSEQ_PEDIDO_ID_PEDIDO.NEXTVAL
+                              SELECT SEQ_PEDIDO_ID_PEDIDO.NEXTVAL
                               INTO   :NEW.ID_PEDIDO
                               FROM   DUAL;
                      END;
