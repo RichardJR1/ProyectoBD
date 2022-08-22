@@ -32,6 +32,14 @@ CREATE OR REPLACE TRIGGER TGR_NEW_PEDIDO
                               INTO   :NEW.ID_PEDIDO
                               FROM   DUAL;
                      END;
+                     
+
+CREATE OR REPLACE TRIGGER TGR_NEW_PEDIDO
+              AFTER INSERT ON PEDIDO
+                     AS
+                            BEGIN
+                             DELETE FROM TEMPORAL_PEDIDO;
+                     END;
 
 CREATE OR REPLACE TRIGGER TGR_NEW_PROVEEDORES
               BEFORE INSERT ON PROVEEDORES
