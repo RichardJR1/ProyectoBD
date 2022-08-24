@@ -38,7 +38,7 @@ CREATE OR REPLACE TRIGGER TGR_NEW_PEDIDO
               AFTER INSERT ON PEDIDO
                      AS
                             BEGIN
-                             DELETE FROM TEMPORAL_PEDIDO;
+                              TRUNCATE TABLE TEMPORAL_PEDIDO;
                      END;
 
 CREATE OR REPLACE TRIGGER TGR_NEW_PROVEEDORES
